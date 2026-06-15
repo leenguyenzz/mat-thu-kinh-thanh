@@ -4,16 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/mat-thu-kinh-thanh/favicon.svg" />
     <link rel="manifest" href="./manifest.json" />
+    <!-- Dòng này là "thần chú" để iPhone nhận diện đúng Logo App ngoài màn hình chính -->
+    <link rel="apple-touch-icon" sizes="512x512" href="./logo512.png" />
     <meta name="theme-color" content="#22d3ee" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Mật Thư" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mat-thu</title>
-    <script type="module" crossorigin src="/mat-thu-kinh-thanh/assets/index-BOgyG_zv.js"></script>
+    <script type="module" crossorigin src="/mat-thu-kinh-thanh/assets/index-CTccu4ZY.js"></script>
     <link rel="stylesheet" crossorigin href="/mat-thu-kinh-thanh/assets/index-YFBLM7jK.css">
   </head>
   <body>
     <div id="root"></div>
   </body>
+  <script>
+     if ('serviceWorker' in navigator) {
+       window.addEventListener('load', () => {
+         navigator.serviceWorker.register('./sw.js')
+           .then(reg => console.log('Service Worker đã sẵn sàng!', reg))
+           .catch(err => console.log('Lỗi đăng ký sw:', err));
+       });
+     }
+   </script>
 </html>

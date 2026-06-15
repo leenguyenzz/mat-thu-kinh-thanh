@@ -14,7 +14,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "/mat-thu-kinh-thanh/",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#22d3ee",
   "background_color": "#ffffff",
